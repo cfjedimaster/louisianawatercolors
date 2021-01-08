@@ -1,0 +1,57 @@
+---
+title: Louisiana Watercolors - the art of Sally Padgett
+subpage: true
+bodyclass: one-column
+---
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{{ title }}</title>
+<meta name="keywords" content="watercolors,art,louisiana" />
+<meta name="description" content="Portfolio site for Sally Padgett, Louisiana watercolor artist." />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<style type="text/css">
+@import "layout.css";
+</style>
+<!--[if IE 6]>
+<link href="ie6fix.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 7]>
+<link href="ie6fix.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script type="text/javascript" src="jquery-1.6.2.min.js"></script>
+</head>
+<body class="{{ bodyclass }}">
+<div id="wrapper">
+	<div id="wrapper-bgtop">
+		<div id="header" class="container">
+			<div id="logo">
+				<h1><a href="/">Sally Padgett</a></h1>
+			</div>
+		</div>
+		{% if subpage %} 
+		<div id="menu" class="container">
+			<ul>
+				<li><a href="index.html" accesskey="1" title="Home"><span>Home</span></a></li>
+				<li {% if page.url == "/portfolio.html" %}class="active" {% endif %}><a href="portfolio.html" accesskey="2" title="Portfolio"><span>Portfolio</span></a></li>
+				<li {% if page.url == "/about.html" %}class="active" {% endif %}><a href="about.html" accesskey="3" title="About"><span>About</span></a></li>
+				<li {% if page.url == "/contact.html" %}class="active" {% endif %}><a href="contact.html" accesskey="4" title="Contact"><span>Contact</span></a></li>
+			</ul>
+		</div>
+		{% endif %}
+		<div id="page" class="container">
+			{{ content }}
+		</div>
+		{% if subpage %}
+		<div id="page-bgbtm" class="container">&nbsp;</div>
+		{% endif %}
+		<div id="footer">
+			<p class="address">103 Creekwood Drive&nbsp;&nbsp;&nbsp;&#8226;&nbsp;&nbsp;&nbsp;Lafayette, LA 70503&nbsp;&nbsp;&nbsp;&#8226;&nbsp;&nbsp;&nbsp;(337) 981-4235</p>
+			<p class="copyright">Copyright (c) {{ "now" | date: "%Y" }} Sally Padgett. All rights reserved.</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>
