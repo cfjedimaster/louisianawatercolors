@@ -1,0 +1,28 @@
+/** MENU */
+
+#menu ul {
+	padding-left: 80px;
+}
+
+#menu li {
+	float: left;
+	display: inline-block;
+}
+
+#menu a {
+	display: inline-block;
+}
+
+/** GALLERY */
+
+#gallery .captions {
+	background-image: url(images/gallerax_sprites.gif);
+}
+
+#slideshow .tl, #slideshow .tr, #slideshow .bl, #slideshow .br {
+	background-image: url(images/gallerax_sprites.gif);
+}
+
+#gallery .captions {
+	bottom: -1px;
+}
